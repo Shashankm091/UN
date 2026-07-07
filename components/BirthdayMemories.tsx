@@ -274,7 +274,7 @@ export default function BirthdayMemories() {
               className="flex h-full w-full items-center justify-center rounded-3xl border border-white/15 bg-white/5 p-10 text-center backdrop-blur-xl"
             >
               <p className="font-hand text-2xl leading-relaxed text-blush md:text-3xl">
-                "{quote}"
+                &ldquo;{quote}&rdquo;
               </p>
             </motion.div>
           ) : images.length > 0 ? (
