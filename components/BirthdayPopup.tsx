@@ -6,7 +6,9 @@ import { useCustomImages, type CustomImage } from "@/hooks/useCustomImages";
 
 export default function BirthdayPopup({ onClose }: { onClose: () => void }) {
   const storageKey = "birthday_popup_image";
-  const defaultImages: CustomImage[] = [];
+  const defaultImages: CustomImage[] = [
+    { src: "/assets/images/popup-photo.jpg", alt: "Birthday photo", isCustom: false },
+  ];
   const { images, loaded, addImages, replaceImage, removeImage } = useCustomImages(
     storageKey,
     defaultImages

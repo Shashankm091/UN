@@ -44,12 +44,26 @@ export const siteConfig = {
 
   // ---- Birthday Memories slideshow ----
   memories: {
-    // Replace these with your own images in /public/assets/images/
-    // Keep the array length or add more — the gallery adapts automatically.
-    images: Array.from({ length: 20 }, (_, i) => ({
-      src: `/assets/images/memory-${(i % 8) + 1}.jpg`,
-      alt: `Memory ${i + 1}`,
-    })),
+    images: [
+      { src: "/assets/images/memory-u-1.jpg", alt: "Memory 1" },
+      { src: "/assets/images/memory-u-2.jpg", alt: "Memory 2" },
+      { src: "/assets/images/memory-u-3.jpg", alt: "Memory 3" },
+      { src: "/assets/images/memory-u-4.jpg", alt: "Memory 4" },
+      { src: "/assets/images/memory-u-5.jpg", alt: "Memory 5" },
+      { src: "/assets/images/memory-u-6.jpg", alt: "Memory 6" },
+      { src: "/assets/images/memory-u-7.jpg", alt: "Memory 7" },
+      { src: "/assets/images/memory-u-8.jpg", alt: "Memory 8" },
+      { src: "/assets/images/memory-u-10.jpg", alt: "Memory 10" },
+      { src: "/assets/images/memory-u-11.jpg", alt: "Memory 11" },
+      { src: "/assets/images/memory-u-12.jpg", alt: "Memory 12" },
+      { src: "/assets/images/memory-u-13.jpg", alt: "Memory 13" },
+      { src: "/assets/images/memory-u-14.jpg", alt: "Memory 14" },
+      { src: "/assets/images/memory-u-15.jpg", alt: "Memory 15" },
+      { src: "/assets/images/memory-u-16.jpg", alt: "Memory 16" },
+      { src: "/assets/images/memory-u-17.jpg", alt: "Memory 17" },
+      { src: "/assets/images/memory-u-18.jpg", alt: "Memory 18" },
+      { src: "/assets/images/memory-u-19.jpg", alt: "Memory 19" },
+    ],
     quotes: [
       "You are my favorite chapter.",
       "Every memory with you is my treasure.",
@@ -133,10 +147,16 @@ Thank you for being exactly who you are.`,
   secret: {
     password: "boni",
     unlockedMessage: "I have one more surprise for you ❤️",
-    images: Array.from({ length: 8 }, (_, i) => ({
-      src: `/assets/images/secret-${(i % 4) + 1}.jpg`,
-      alt: `Secret memory ${i + 1}`,
-    })),
+    images: [
+      { src: "/assets/images/secret-u-1.jpg", alt: "Secret memory 1" },
+      { src: "/assets/images/secret-u-2.jpg", alt: "Secret memory 2" },
+      { src: "/assets/images/secret-u-3.jpg", alt: "Secret memory 3" },
+      { src: "/assets/images/secret-u-4.jpg", alt: "Secret memory 4" },
+      { src: "/assets/images/secret-u-5.jpg", alt: "Secret memory 5" },
+      { src: "/assets/images/secret-u-6.jpg", alt: "Secret memory 6" },
+      { src: "/assets/images/secret-u-7.jpg", alt: "Secret memory 7" },
+      { src: "/assets/images/secret-u-8.jpg", alt: "Secret memory 8" },
+    ],
   },
 
   // ---- Final screen ----
@@ -151,7 +171,7 @@ Thank you for being exactly who you are.`,
 
   // ---- Music ----
   music: {
-    src: "/assets/music/background.mp3", // replace with your own track
+    src: "/assets/music/custom-song.mp3", // your uploaded song
     loop: true,
     defaultVolume: 0.4,
   },

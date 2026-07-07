@@ -160,10 +160,21 @@ export default function MemoryGallery() {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const bulkInputRef = useRef<HTMLInputElement>(null);
 
-  // Load from IndexedDB on mount
+  // Load from IndexedDB on mount, fall back to default public videos
   useEffect(() => {
     loadVideosFromDB().then((v) => {
-      setVideos(v);
+      if (v.length > 0) {
+        setVideos(v);
+      } else {
+        // Default videos embedded in public folder — visible to everyone
+        setVideos([
+          { id: -1, src: "/assets/videos/memory-1.mp4", name: "Our Memory 1" },
+          { id: -2, src: "/assets/videos/memory-2.mp4", name: "Our Memory 2" },
+          { id: -3, src: "/assets/videos/memory-3.mp4", name: "Our Memory 3" },
+          { id: -4, src: "/assets/videos/memory-4.mp4", name: "Our Memory 4" },
+          { id: -5, src: "/assets/videos/memory-5.mp4", name: "Our Memory 5" },
+        ]);
+      }
       setLoaded(true);
     });
   }, []);
