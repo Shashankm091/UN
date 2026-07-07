@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useCustomImages } from "@/hooks/useCustomImages";
+import { useCustomImages, type CustomImage } from "@/hooks/useCustomImages";
 
 export default function BirthdayPopup({ onClose }: { onClose: () => void }) {
   const storageKey = "birthday_popup_image";
-  const defaultImages = [];
+  const defaultImages: CustomImage[] = [];
   const { images, loaded, addImages, replaceImage, removeImage } = useCustomImages(
     storageKey,
     defaultImages
